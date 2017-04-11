@@ -15,7 +15,8 @@ server:
     undertow:
         accesslog:
             enabled: true
-            pattern: '%t %a "%r" %s (%D ms)'
+            pattern: '%h %t "%r" %s "%{i,User-Agent}" %l %u %b %T'
+            dir: '/var/log/crud'
 spring:
     aop:
         proxy-target-class: true

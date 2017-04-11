@@ -38,42 +38,43 @@ task wrapper(type: Wrapper) {
     gradleVersion = '3.4.1'
 }
 
-applicationDefaultJvmArgs = ["-Dgreeting.language=en"]
-
 jar {
     baseName = 'crud'
     version = '0.0.2-SNAPSHOT'
 }
 
+applicationDefaultJvmArgs =["-server",
+                            "-Xms1g",
+                            "-Xmx1g",
+                            "-XX:NewRatio=3",
+                            "-Xss16m",
+                            "-XX:+UseConcMarkSweepGC",
+                            "-XX:+CMSParallelRemarkEnabled",
+                            "-XX:ConcGCThreads=4",
+                            "-XX:ReservedCodeCacheSize=240m",
+                            "-XX:+AlwaysPreTouch",
+                            "-XX:+TieredCompilation",
+                            "-XX:+UseCompressedOops",
+                            "-XX:SoftRefLRUPolicyMSPerMB=50",
+                            "-Dsun.io.useCanonCaches=false",
+                            "-Djava.net.preferIPv4Stack=true",
+                            "-Djsse.enableSNIExtension=false",
+                            "-ea",
+                            "-XX:+UseAdaptiveGCBoundary",
+                            "-XX:CompileThreshold=10000",
+                            "-XX:+OptimizeStringConcat",
+                            "-XX:+UseFastAccessorMethods",
+                            "-XX:+HeapDumpOnOutOfMemoryError",
+                            "-XX:-OmitStackTraceInFastThrow",
+                            "-XX:MaxJavaStackTraceDepth=-1",
+                            "-XX:+UseCompressedOops",
+                            "-Dgreeting.language=en"]
+
 bootRun {
     if (project.hasProperty('jvmArgs')) {
         jvmArgs = (project.jvmArgs.split("\\s+") as List)
     } else {
-        jvmArgs = ["-server",
-                   "-Xms1g",
-                   "-Xmx1g",
-                   "-XX:NewRatio=3",
-                   "-Xss16m",
-                   "-XX:+UseConcMarkSweepGC",
-                   "-XX:+CMSParallelRemarkEnabled",
-                   "-XX:ConcGCThreads=4",
-                   "-XX:ReservedCodeCacheSize=240m",
-                   "-XX:+AlwaysPreTouch",
-                   "-XX:+TieredCompilation",
-                   "-XX:+UseCompressedOops",
-                   "-XX:SoftRefLRUPolicyMSPerMB=50",
-                   "-Dsun.io.useCanonCaches=false",
-                   "-Djava.net.preferIPv4Stack=true",
-                   "-Djsse.enableSNIExtension=false",
-                   "-ea",
-                   "-XX:+UseAdaptiveGCBoundary",
-                   "-XX:CompileThreshold=10000",
-                   "-XX:+OptimizeStringConcat",
-                   "-XX:+UseFastAccessorMethods",
-                   "-XX:+HeapDumpOnOutOfMemoryError",
-                   "-XX:-OmitStackTraceInFastThrow",
-                   "-XX:MaxJavaStackTraceDepth=-1",
-                   "-XX:+UseCompressedOops"]
+        jvmArgs = applicationDefaultJvmArgs
     }
 }
 
@@ -199,10 +200,10 @@ task weaveJpaEntities(type: JavaExec, dependsOn: "compileJava"){
     inputs.dir compileJava.destinationDir
     outputs.dir compileJava.destinationDir
     main "org.eclipse.persistence.tools.weaving.jpa.StaticWeave"
-    args "-loglevel", "FINE",
-         "-persistenceinfo", "src/main/resources",
+    args "-persistenceinfo", "src/main/resources",
          compileJava.destinationDir.getAbsolutePath(),
          compileJava.destinationDir.getAbsolutePath()
+         //,"-loglevel", "FINE"
     classpath = configurations.compile
 }
 

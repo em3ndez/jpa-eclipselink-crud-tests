@@ -47,7 +47,7 @@
             <!--  Optimization - turn logging off -->
             <property name="eclipselink.logging.logger" value="JavaLogger"/>
             <property name="eclipselink.logging.parameters" value="true"/> <!-- false -->
-            <property name="eclipselink.logging.level" value="FINE" /> <!-- OFF -->
+            <property name="eclipselink.logging.level" value="INFO" /> <!-- OFF, FINE -->
             <property name="eclipselink.logging.level.sql" value="FINE"/>
             <!--  Optimization - close EntityManager on commit, to avoid cost of resume -->
             <property name="eclipselink.persistence-context.close-on-commit" value="true"/>
