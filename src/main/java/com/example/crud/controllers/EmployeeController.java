@@ -26,6 +26,13 @@ public class EmployeeController {
 
     @Autowired private EmployeeService employeeService;
 
+    /**
+     * Read all employees.
+     *
+     * Examples:
+     *  1. HTTP GET localhost:8443/api/v1/employees
+     *  2. curl -i -X GET localhost:8443/employees
+     */
     @Transactional(readOnly = true, isolation = Isolation.REPEATABLE_READ)
     @RequestMapping(value = "/api/v1/employees", method = GET, produces = "application/json")
     public ResponseEntity<List<Employee>> index() {
@@ -44,6 +51,13 @@ public class EmployeeController {
         return response;
     }
 
+    /**
+     * Create a new employee.
+     *
+     * Examples:
+     *  1. HTTP POST localhost:8443/api/v1/employee firstName=Tedd lastName=Hanson honorific=Mr suffix=Jr. socialSecurityNumber=555-55-5555
+     *  2. curl -i -X POST -H "Content-Type:application/json" -d '{ "firstName" : "Karl", "lastName" : "Pasim", "socialSecurityNumber" : "123-23-2312" }' localhost:8443/api/v1/employee
+     */
     @Retry(times = 3, on = org.springframework.dao.OptimisticLockingFailureException.class)
     @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ)
     @RequestMapping(value = "/api/v1/employee", method = POST, consumes = "application/json")
@@ -53,7 +67,7 @@ public class EmployeeController {
         try {
             val e = employeeService.saveEmployee(employee);
             if (e != null) {
-                response = ResponseEntity.status(HttpStatus.CREATED).body(e.getId());
+                response = ResponseEntity.status(HttpStatus.CREATED).body(e);
             } else {
                 response = ResponseEntity.status(HttpStatus.NOT_MODIFIED).build();
             }
@@ -63,23 +77,15 @@ public class EmployeeController {
         return response;
     }
 
-    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.SERIALIZABLE)
-    @RequestMapping(value = "/api/v1/employee/{id:[\\d]+}", method = DELETE)
-    public ResponseEntity<Long> deleteEmployee(@PathVariable Long id) {
-        log.debug("Deleting employee");
-        @SuppressWarnings("unchecked") ResponseEntity response = ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-        try {
-            employeeService.delete(id);
-            response = ResponseEntity.status(HttpStatus.OK).body(id);
-        } catch (Exception e) {
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return response;
-    }
-
+    /**
+     * Read an employee by primary key (id).
+     *
+     * Examples:
+     *  1. HTTP GET localhost:8443/api/v1/employee/851864136237137920
+     *  2. curl -i -X GET localhost:8443/employee/851864136237137920
+     */
     @Transactional(readOnly = true, isolation = Isolation.REPEATABLE_READ)
-    //@RequestMapping(value = "/api/v1/employee/{id:[\\d]+}", method = GET)
-    @RequestMapping(value = "/api/v1/employee/{id}", method = GET)
+    @RequestMapping(value = "/api/v1/employee/{id:[\\d]+}", method = GET)
     public ResponseEntity<Employee> find(@PathVariable Long id) {
         log.debug("Getting a specific employee by id {}", id);
         @SuppressWarnings("unchecked") ResponseEntity response = ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
@@ -96,6 +102,13 @@ public class EmployeeController {
         return response;
     }
 
+    /**
+     * Read the set of employees with a given last name.
+     *
+     * Examples:
+     *  1. HTTP GET localhost:8443/api/v1/employee?last=washington
+     *  2. curl -i -X GET localhost:8443/employee?last=washington
+     */
     @Transactional(readOnly = true, isolation = Isolation.REPEATABLE_READ)
     @RequestMapping(value = "/api/v1/employee/named", method = GET)
     public ResponseEntity<List<Employee>> find(@RequestParam("last") String name) {
@@ -114,19 +127,25 @@ public class EmployeeController {
         return response;
     }
 
-    @Transactional(readOnly = true, isolation = Isolation.REPEATABLE_READ)
+    /**
+     * Delete a new employee.
+     *
+     * Examples:
+     *  1. HTTP DELETE localhost:8443/api/v1/employee/851864136237137920
+     *  2. curl -i -X DELETE localhost:8443/api/v1/employee/851864136237137920
+     */
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.SERIALIZABLE)
     @RequestMapping(value = "/api/v1/employee/{id:[\\d]+}", method = DELETE)
-    public @ResponseBody Long delete(@PathVariable Long id) {
+    public ResponseEntity<Long> deleteEmployee(@PathVariable Long id) {
         log.debug("Remove an employee by id {}", id);
-        employeeService.delete(id);
-        return id;
+        @SuppressWarnings("unchecked") ResponseEntity response = ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        try {
+            employeeService.delete(id);
+            response = ResponseEntity.status(HttpStatus.OK).body(id);
+        } catch (Exception e) {
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return response;
     }
 
-    /*
-    @Transactional(readOnly = true, isolation = Isolation.REPEATABLE_READ)
-    @RequestMapping("/api/v1/employee/lastNameLength")
-    public List<Employee> fetchByLength(Long length) {
-        return employeeService.fetchByLastNameLength(length);
-    }
-    */
 }

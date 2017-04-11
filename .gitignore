@@ -12,6 +12,8 @@
 *~
 #*#
 gradle
+gradlew
+._git_gburd
 .gradle
 run-jetty-run/
 license.err

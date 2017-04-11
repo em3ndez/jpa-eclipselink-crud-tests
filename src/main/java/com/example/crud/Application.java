@@ -111,7 +111,7 @@ public class Application {
     @Bean
     public Map<String, String> jpaProperties() {
         Map<String, String> props = new HashMap<>();
-        props.put("eclipselink.weaving", "static"); //TODO(gburd): enable
+        props.put("eclipselink.weaving", "static");
         return props;
     }
 
@@ -133,6 +133,7 @@ public class Application {
         return dataSource;
     }
 
+    /*
     @Bean
     public CacheManager cacheManager() {
         //TODO(gburd): is there an eclipselink cache manager? or caffeine? or...?
@@ -143,5 +144,6 @@ public class Application {
 
         return manager;
     }
+    */
 
 }

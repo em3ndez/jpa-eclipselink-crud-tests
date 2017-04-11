@@ -195,21 +195,15 @@ dependencyManagement {
 //     user = 'root'
 // }
 
-task performJPAWeaving(type: JavaExec, dependsOn: "compileJava"){
+task weaveJpaEntities(type: JavaExec, dependsOn: "compileJava"){
     inputs.dir compileJava.destinationDir
     outputs.dir compileJava.destinationDir
     main "org.eclipse.persistence.tools.weaving.jpa.StaticWeave"
-    args  "-persistenceinfo",
-            "src/main/resources",
-            compileJava.destinationDir.getAbsolutePath(),
-            compileJava.destinationDir.getAbsolutePath()
+    args "-loglevel", "FINE",
+         "-persistenceinfo", "src/main/resources",
+         compileJava.destinationDir.getAbsolutePath(),
+         compileJava.destinationDir.getAbsolutePath()
     classpath = configurations.compile
 }
 
-tasks.withType(JavaCompile){
-    doLast{
-        tasks.performJPAWeaving.execute()
-    }
-}
-// http://stackoverflow.com/questions/6431026/generating-jpa2-metamodel-from-a-gradle-build-script
-// http://bsideup.blogspot.com/2015/04/querydsl-with-gradle-and-idea.html
+classes.dependsOn weaveJpaEntities
