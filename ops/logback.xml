@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+    <appender name="R1" class="pl.defunkt.logback.RiemannAppender">
+        <serviceName>Example CRUD Service</serviceName>
+        <riemannHostName>127.0.0.1</riemannHostName>
+        <riemannPort>5555</riemannPort>
+        <hostName>graphene.local</hostName>
+        <customAttributes>application:test-service,datacenter:us-sw</customAttributes>
+        <riemannLogLevel>WARN</riemannLogLevel>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="R1"/>
+    </root>
+  </configuration>

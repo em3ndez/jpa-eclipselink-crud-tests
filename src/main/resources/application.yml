@@ -1,0 +1,28 @@
+management:
+    port: 8484
+    security:
+        enabled: false
+    ssl:
+        enabled: false
+        key-store: classpath:management.jks
+        key-password: super*53cr37!pa33w0rd,
+server:
+    port: ${port:8443}
+    ssl:
+        enabled: false
+        key-store: classpath:main.jks
+        key-password: super*53cr37!pa33w0rd,
+    undertow:
+        accesslog:
+            enabled: true
+            pattern: '%t %a "%r" %s (%D ms)'
+spring:
+    aop:
+        proxy-target-class: true
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        password: ''
+        url: jdbc:postgresql://127.0.0.1:26257/crud?sslmode=disable
+        username: root
+    jpa:
+        show-sql: true

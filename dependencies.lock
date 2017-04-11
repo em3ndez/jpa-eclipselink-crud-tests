@@ -1,0 +1,1516 @@
+{
+    "compile": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "compileClasspath": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "default": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "querydslapt": {
+        "com.mysema.querydsl:querydsl-apt": {
+            "locked": "3.7.4",
+            "requested": "3.+"
+        }
+    },
+    "runtime": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "runtimeClasspath": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "testCompile": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.github.stefanbirkner:system-rules": {
+            "locked": "1.16.1",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "junit:junit": {
+            "locked": "4.12",
+            "requested": "4.+"
+        },
+        "nl.jqno.equalsverifier:equalsverifier": {
+            "locked": "1.7.8",
+            "requested": "1.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.assertj:assertj-core": {
+            "locked": "2.6.0",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "1.3",
+            "requested": "1.3"
+        },
+        "org.mockito:mockito-all": {
+            "locked": "1.10.19",
+            "requested": "1.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.quicktheories:quicktheories": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-test": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "testCompileClasspath": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.github.stefanbirkner:system-rules": {
+            "locked": "1.16.1",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "junit:junit": {
+            "locked": "4.12",
+            "requested": "4.+"
+        },
+        "nl.jqno.equalsverifier:equalsverifier": {
+            "locked": "1.7.8",
+            "requested": "1.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.assertj:assertj-core": {
+            "locked": "2.6.0",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "1.3",
+            "requested": "1.3"
+        },
+        "org.mockito:mockito-all": {
+            "locked": "1.10.19",
+            "requested": "1.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.quicktheories:quicktheories": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-test": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "testRuntime": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.github.stefanbirkner:system-rules": {
+            "locked": "1.16.1",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "junit:junit": {
+            "locked": "4.12",
+            "requested": "4.+"
+        },
+        "nl.jqno.equalsverifier:equalsverifier": {
+            "locked": "1.7.8",
+            "requested": "1.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.assertj:assertj-core": {
+            "locked": "2.6.0",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "1.3",
+            "requested": "1.3"
+        },
+        "org.mockito:mockito-all": {
+            "locked": "1.10.19",
+            "requested": "1.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.quicktheories:quicktheories": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-test": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "testRuntimeClasspath": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.github.rholder.fauxflake:fauxflake-core": {
+            "locked": "1.1.0",
+            "requested": "1.+"
+        },
+        "com.github.stefanbirkner:system-rules": {
+            "locked": "1.16.1",
+            "requested": "1.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "com.querydsl:querydsl-jpa": {
+            "locked": "4.1.4",
+            "requested": "4.+"
+        },
+        "com.ryantenney.metrics:metrics-spring": {
+            "locked": "3.1.3",
+            "requested": "3.+"
+        },
+        "commons-codec:commons-codec": {
+            "locked": "1.10",
+            "requested": "1.+"
+        },
+        "defunkt:logback-riemann-appender": {
+            "locked": "0.4.0",
+            "requested": "0.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jetty9": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-servlets": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "junit:junit": {
+            "locked": "4.12",
+            "requested": "4.+"
+        },
+        "nl.jqno.equalsverifier:equalsverifier": {
+            "locked": "1.7.8",
+            "requested": "1.+"
+        },
+        "org.apache.commons:commons-lang3": {
+            "locked": "3.5",
+            "requested": "3.+"
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.0.BETA-5",
+            "requested": "1.+"
+        },
+        "org.assertj:assertj-core": {
+            "locked": "2.6.0",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "1.3",
+            "requested": "1.3"
+        },
+        "org.mockito:mockito-all": {
+            "locked": "1.10.19",
+            "requested": "1.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "9.4.1212.jre7"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.14"
+        },
+        "org.quicktheories:quicktheories": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "org.slf4j:jcl-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.8.0-alpha0",
+            "requested": "1.+"
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-cache": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-jpa": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-data-rest": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-test": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-undertow": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.boot:spring-boot-starter-web": {
+            "locked": "1.5.2.RELEASE"
+        },
+        "org.springframework.data:spring-data-jpa": {
+            "locked": "1.11.1.RELEASE"
+        },
+        "org.springframework:spring-beans": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-context": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-core": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.springframework:spring-tx": {
+            "locked": "4.3.7.RELEASE"
+        },
+        "org.zalando:logbook-httpclient": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-servlet": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-spring-boot-starter": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    }
+}

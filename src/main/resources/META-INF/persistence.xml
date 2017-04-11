@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- https://jcp.org/aboutJava/communityprocess/final/jsr338/index.html -->
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <class>com.example.crud.db.models.Address</class>
+        <class>com.example.crud.db.models.Employee</class>
+        <class>com.example.crud.db.models.EmploymentPeriod</class>
+        <class>com.example.crud.db.models.Gender</class>
+        <class>com.example.crud.db.models.GenderConverter</class>
+        <class>com.example.crud.db.models.PhoneNumber</class>
+        <properties>
+
+            <!-- EclipseLink should create the database schema automatically -->
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:26257/crud?sslmode=disable"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.schema-generation.database.action" value="create-or-extend-tables"/>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.PostgreSQLPlatform"/>
+            <property name="eclipselink.session.customizer" value="com.example.crud.db.util.EclipseLinkSessionCustomizer"/>
+            <!-- Enable weaving "All the things!"(TM) -->
+            <property name="eclipselink.weaving" value="static"/>
+            <property name="eclipselink.weaving.eager" value="true"/>
+            <property name="eclipselink.weaving.fetchgroups" value="true"/>
+            <property name="eclipselink.weaving.internal" value="true"/>
+            <property name="eclipselink.weaving.lazy" value="true"/>
+
+            <!--  Optimization - statement caching -->
+            <property name="eclipselink.jdbc.cache-statements" value="true"/>
+            <!--  Optimization - batch writing -->
+            <property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+            <property name="eclipselink.jdbc.batch-writing.size" value="1000"/>
+            <!--  Optimization - disable caching for batch insert (caching only improves reads, so only adds overhead for inserts) -->
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <!--  Except for XXX which is shared by orders
+            <property name="eclipselink.cache.shared.Customer" value="true"/> TODO(gburd): ? -->
+            <!--  Optimization - turn logging off -->
+            <property name="eclipselink.logging.logger" value="JavaLogger"/>
+            <property name="eclipselink.logging.parameters" value="true"/> <!-- false -->
+            <property name="eclipselink.logging.level" value="FINE" /> <!-- OFF -->
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <!--  Optimization - close EntityManager on commit, to avoid cost of resume -->
+            <property name="eclipselink.persistence-context.close-on-commit" value="true"/>
+            <!--  Optimization - avoid auto flush cost on query execution -->
+            <property name="eclipselink.persistence-context.flush-mode" value="commit"/>
+            <!--  Optimization - avoid cost of persist on commit -->
+            <property name="eclipselink.persistence-context.persist-on-commit" value="false"/>
+            <!-- Optimization -  -->
+            <property name="eclipselink.jdbc.bind-parameters" value="true"/>
+            <!--  Optimization - create indexes for all foreign key fields -->
+            <property name="eclipselink.ddl-generation.index-foreign-keys" value="true"/>
+            <!-- Optimization - enable query caching -->
+            <property name="eclipselink.cache.query-results" value="true"/>
+            <!-- Optimization - disable the Performance Profiler in production -->
+            <property name="eclipselink.profiler" value="org.eclipse.persistence.tools.profiler.PerformanceProfiler"/>
+
+            <!-- Level 2 Cache: database change notifications to synchronize L2 cache state -->
+            <!--
+                 The hope is to plumb EclipseLink with a L2 cache similar to Hibernate's use of Redisson
+                 and then to have a multi-region cluster of Redis nodes managed by Netflix's Dynomite.
+
+                 TODO(gburd):  Either these change notifications sent from the database...
+                                 (a) are idempotent and cheap to perform many times or
+                                 (b) sent to a specific owner for a key (using the Dynomite Redis client to route)
+                                 (b) are first queued then applied once by workers
+                 <property name="eclipselink.cache.database-event-listener" value="DCN"/> -->
+        </properties>
+    </persistence-unit>
+</persistence>

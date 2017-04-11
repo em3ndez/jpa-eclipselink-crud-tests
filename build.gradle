@@ -1,0 +1,215 @@
+// gradle wrapper
+// ./gradlew dependencies --configuration compile
+// ./gradlew clean generateLock saveLock
+// ./gradlew compileJava
+// ./gradlew run
+// ./gradlew run --debug-jvm
+
+buildscript {
+    ext { }
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://clojars.org/repo" }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://repo.spring.io/milestone" } //maven { url "https://repo.spring.io/snapshot" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+        classpath 'com.netflix.nebula:gradle-dependency-lock-plugin:4.+'
+//        classpath 'se.transmode.gradle:gradle-docker:1.2'
+        classpath 'com.uber:okbuck:0.19.0'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+apply plugin: "io.spring.dependency-management"
+apply plugin: 'com.uber.okbuck'
+apply plugin: 'nebula.dependency-lock'
+//TODO(gburd): apply plugin: 'org.flywaydb.flyway', version "4.1.2"
+//TODO(gburd): apply plugin: 'docker'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
+}
+
+applicationDefaultJvmArgs = ["-Dgreeting.language=en"]
+
+jar {
+    baseName = 'crud'
+    version = '0.0.2-SNAPSHOT'
+}
+
+bootRun {
+    if (project.hasProperty('jvmArgs')) {
+        jvmArgs = (project.jvmArgs.split("\\s+") as List)
+    } else {
+        jvmArgs = ["-server",
+                   "-Xms1g",
+                   "-Xmx1g",
+                   "-XX:NewRatio=3",
+                   "-Xss16m",
+                   "-XX:+UseConcMarkSweepGC",
+                   "-XX:+CMSParallelRemarkEnabled",
+                   "-XX:ConcGCThreads=4",
+                   "-XX:ReservedCodeCacheSize=240m",
+                   "-XX:+AlwaysPreTouch",
+                   "-XX:+TieredCompilation",
+                   "-XX:+UseCompressedOops",
+                   "-XX:SoftRefLRUPolicyMSPerMB=50",
+                   "-Dsun.io.useCanonCaches=false",
+                   "-Djava.net.preferIPv4Stack=true",
+                   "-Djsse.enableSNIExtension=false",
+                   "-ea",
+                   "-XX:+UseAdaptiveGCBoundary",
+                   "-XX:CompileThreshold=10000",
+                   "-XX:+OptimizeStringConcat",
+                   "-XX:+UseFastAccessorMethods",
+                   "-XX:+HeapDumpOnOutOfMemoryError",
+                   "-XX:-OmitStackTraceInFastThrow",
+                   "-XX:MaxJavaStackTraceDepth=-1",
+                   "-XX:+UseCompressedOops"]
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://clojars.org/repo" }
+    maven { url "https://repo.spring.io/milestone" } //maven { url "https://repo.spring.io/snapshot" }
+}
+
+configurations {
+    querydslapt
+    compile.exclude module: 'spring-boot-starter-tomcat'
+    compile.exclude module: 'tomcat-jdbc'
+}
+
+configurations.all {
+    exclude group: 'org.hibernate', module: 'hibernate-entitymanager'
+    exclude group: 'org.hibernate', module: 'hibernate-core'
+    exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    exclude group: 'log4j', module: 'log4j'
+}
+
+dependencies {
+    // Some Java Extras
+    compile group: 'javax.inject', name: 'javax.inject', version: '1'
+
+    // Apache Commons
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.+'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.+'
+
+    // Google Guava, "For all the Goodness(TM)"
+    compile group: 'com.google.guava', name: 'guava', version: '21.+'
+
+    // Joda Time, "Because time is hard(TM)"
+    compile group: 'joda-time', name: 'joda-time', version: '2.+'
+
+    // Lombok, "Where less is more(TM)"
+    compile group: 'org.projectlombok', name: 'lombok'
+
+    // AOP
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.+'
+
+    // All the Spring, for all the things (e.g. a REST web application with a SQL database)
+    compile group: 'org.springframework', name: 'spring-core'
+    compile group: 'org.springframework', name: 'spring-beans'
+    compile group: 'org.springframework', name: 'spring-context'
+    compile group: 'org.springframework', name: 'spring-tx'
+    compile group: 'org.springframework.data', name: 'spring-data-jpa'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-undertow'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-cache'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'com.querydsl', name: 'querydsl-jpa', version: '4.+'
+    querydslapt group: 'com.mysema.querydsl', name: 'querydsl-apt', version: '3.+' // QueryDsl Weaving
+
+    // Entity Storage (aka. txn{CRUD}), "Things necessary for data persistence"
+    // - CockroachDB speaks the PostgreSQL wire protocol
+    // - EclipseLink (ORM)
+    // - UUID/Primary Keys (Fast, coordination-free, decentralized, k-ordered unique ID generator)
+    // - Flake ID generation
+    // - Flyway, "Change happens(TM)"
+    compile group: 'org.postgresql', name: 'postgresql'
+    compile group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.+'
+    compile group: 'org.eclipse.persistence', name: 'javax.persistence', version: '2.+'
+    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.+'
+    compile group: 'com.github.rholder.fauxflake', name: 'fauxflake-core', version: '1.+'
+//  compile group: 'org.flywaydb', name: 'flyway-core'
+
+    // Dropwizard (aka. CodaHale) Metrics, "Measure all the things!(TM)"
+    compile group: 'io.dropwizard.metrics', name: 'metrics-core', version: '3.+'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '3.+'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-healthchecks', version: '3.+'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-servlets', version: '3.+'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-jetty9', version: '3.+'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-graphite', version: '3.+'
+    compile group: 'com.ryantenney.metrics', name: 'metrics-spring', version: '3.+'
+    compile group: 'io.riemann', name: 'metrics3-riemann-reporter', version: '0.+'
+    compile group: 'defunkt', name: 'logback-riemann-appender', version: '0.+'
+
+    // Logging for Java, "Visibility proceeds insight(TM)"
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.+'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
+    compile group: 'org.zalando', name: 'logbook-servlet', version: '1.+'
+    compile group: 'org.zalando', name: 'logbook-httpclient', version: '1.+'
+    compile group: 'org.zalando', name: 'logbook-spring-boot-starter', version: '1.+'
+    compile group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.+'
+    compile group: 'org.slf4j', name: 'log4j-over-slf4j', version: '1.+'
+
+    // Testing
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.+'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '2.+'
+    testCompile group: 'com.github.stefanbirkner', name: 'system-rules', version: '1.+'
+    testCompile group: 'nl.jqno.equalsverifier', name: 'equalsverifier', version: '1.+'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-core', version: '1.3'
+    testCompile group: 'org.quicktheories', name: 'quicktheories', version: '0.+'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+
+    testCompile group: 'com.github.javafaker', name: 'javafaker', version: '0.+'
+}
+
+dependencyManagement {
+    imports { mavenBom 'org.springframework.data:spring-data-releasetrain:Ingalls-SR1' }
+    dependencies {
+        dependency group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.11.+'
+    }
+}
+
+// flyway {
+//     url = 'jdbc:postgresql://127.0.0.1:26257/crud?sslmode=disable'
+//     user = 'root'
+// }
+
+task performJPAWeaving(type: JavaExec, dependsOn: "compileJava"){
+    inputs.dir compileJava.destinationDir
+    outputs.dir compileJava.destinationDir
+    main "org.eclipse.persistence.tools.weaving.jpa.StaticWeave"
+    args  "-persistenceinfo",
+            "src/main/resources",
+            compileJava.destinationDir.getAbsolutePath(),
+            compileJava.destinationDir.getAbsolutePath()
+    classpath = configurations.compile
+}
+
+tasks.withType(JavaCompile){
+    doLast{
+        tasks.performJPAWeaving.execute()
+    }
+}
+// http://stackoverflow.com/questions/6431026/generating-jpa2-metamodel-from-a-gradle-build-script
+// http://bsideup.blogspot.com/2015/04/querydsl-with-gradle-and-idea.html

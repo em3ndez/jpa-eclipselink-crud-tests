@@ -1,0 +1,6 @@
+$ docker run -d -p 4567:4567 travix/riemann-dash:latest
+$ docker run -d -p 5555:5555 -p 5556:5556 -p 16384:16384 travix/riemann-server:latest
+$ open http://127.0.0.1:4567/#Riemann
+
+java -jar riemann-grid-0.6.4-standalone.jar -l 127.0.0.1 -p 9999 -H 127.0.0.1 -P 5555
+
